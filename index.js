@@ -1,4 +1,5 @@
-let array = [12, 20, 39, 7, 17, 4];
+let array = [12, 20, 39, 7, 17, 44];
+let another = [18, 99, 27, 13];
 
 const pushMethod = () => {
   array.push(25, 33);
@@ -59,8 +60,37 @@ const everyMethod = () => {
 };
 
 const fromMethod = () => {
-  let array2 = Array.from("LuanPham");
+  let name = "LuanPham";
+  let array2 = Array.from(name);
   console.log(`array 2 is now ${array2}`);
+};
+
+const atMethod = () => {
+  let array2 = array.at(2);
+  console.log(`array2 is now ${array2}`);
+};
+
+const reduceMethod = () => {
+  let array2 = array.reduce(
+    (accumlator, currentValue) => accumlator + currentValue,
+    0
+  );
+  console.log(`array2 is now ${array2}`);
+};
+
+const joinMethod = () => {
+  let array2 = array.join(" * ");
+  console.log(`array2 is now ${array2}`);
+};
+
+const concatMethod = () => {
+  let array2 = array.concat(another);
+  console.log(`array2 is now ${array2}`);
+};
+
+const reverseMethod = () => {
+  let array2 = array.reverse();
+  console.log(`array2 is now ${array2}`);
 };
 
 // pushMethod();
@@ -72,5 +102,10 @@ const fromMethod = () => {
 // mapMethod();
 // filterMethod();
 // someMethod();
-everyMethod();
+// everyMethod();
 // fromMethod();
+// atMethod();
+// reduceMethod();
+// joinMethod();
+// concatMethod();
+reverseMethod();
